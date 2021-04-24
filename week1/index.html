@@ -6,11 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Week 1 Notes</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <h1>Week 1 - Notes</h1>
+    <h2>Doing Stuff with Web Things</h2>
+    <h3>Section 2.3</h3>
+    <p>Below is the example from section 2.3 of the book. The example is a bit different than the one in the book. I added an if-else statement to the displayStory() function so the user could display the story without needed to 'Find and Edit It' first.
+        If the user hasn't saved his story, the program outputs what the user currently has typed in the textarea. I also added some HTML tags to the output so the user doesn't need to add those into the textarea.</p>
+    <p>Please give it a try!</p>
+    <h4>Story Editor</h4>
+    Story Name:<input id=name_input></input>
+    <section>
+        <button onclick="loadStory()">Find and Edit It</button>
+        <button onclick="saveStory()">Save It</button>
+        <button onclick="displayStory()">Display It</button>
+    </section>
+    <textarea id="story_editor" placeholder="Write a totally awesome story here."></textarea>
+    <section id="story_display"></section>
+    <h4>Questions</h4>
+    <ul>
+        <li>Where are these stories saved? I googled it and found out that the localStorage() method saves key-value pairs in the browser. It is interesting to know that there are so many ways to save the data we use in our programs.</li>
+    </ul>
+    <h2>Doing Stuff with Web Things</h2>
+    <h3>Section 3 to the End of Book</h3>
+    <p>Everything felt like a review to me :)</p>
+    <h2>Master Mobile UX</h2>
+    <h3>Key concepts to remember</h3>
+    <ol>
+        <li>Rewire your brain for mobile first: I need to design for mobile devices first. The web started only with desktop computers in mind. However, mobile devices are skyrocketing the market, while desktop computers are declining in consumption.</li>
+        <li>Understand Users: Users value simplicity, speed, and sometimes they 'don't know what they want, until you show it to them'(Steve Jobs).</li>
+        <li>Strategic Menu Design: Nav bar can go to the bottom of the screen so users can reach it with their thumbs. Replace the hamburger button with a button labeled 'Menu.'</li>
+        <li>Mobile-Friendly Forms: The narrator used some very cool animations to make the form very friendly. This video is worth watching again.</li>
+        <li>Mobile Advertising User Experience: Try to get rid of as much advertising as possible because people visit your website for content, not for advertisment. This video is also worth watching again.</li>
+    </ol>
+
 </body>
+<script src="scripts.js"></script>
 
 </html>
