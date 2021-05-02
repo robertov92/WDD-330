@@ -1,7 +1,10 @@
 const mainOrderList = document.getElementById('main-ordered-list');
 const links = [{
     label: "Week 1 - Notes and exercises",
-    url: "week1/index.html"
+    url: "week1/"
+}, {
+    label: "Week 2 - Notes and exercises",
+    url: "week2/"
 }];
 
 links.forEach(link => {
