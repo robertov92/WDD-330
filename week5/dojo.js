@@ -65,6 +65,7 @@ const view = {
 
 const game = {
     start(quiz) {
+        console.log('start() invoked');
         this.score = 0;
         this.questions = [...quiz];
         view.setup();
@@ -80,6 +81,7 @@ const game = {
         }
     },
     ask(name) {
+        console.log('ask() invoked');
         if (this.questions.length > 2) {
             shuffle(this.questions);
             this.question = this.questions.pop();
@@ -93,6 +95,7 @@ const game = {
         }
     },
     check(event) {
+        console.log('check(event) invoked');
         const response = event.target.textContent;
         const answer = this.question.realName;
         if (response === answer) {
@@ -105,6 +108,7 @@ const game = {
         this.ask();
     },
     gameOver() {
+        console.log('gameOver() invoked');
         view.render(view.info, `Game Over, you scored ${this.score} point${this.score !== 1 ? 's' : ''}`);
         view.teardown();
         clearInterval(this.timer);
