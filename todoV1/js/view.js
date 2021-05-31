@@ -51,6 +51,7 @@ export default class View {
         // creates checkbox
         const checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.classList.add('form-check-input');
         checkbox.checked = todo.completed;
         if (todo.completed) {
             document.getElementById(todo.id).style.textDecoration = 'line-through';
@@ -61,6 +62,7 @@ export default class View {
 
         //creates delete btn
         const deleteBtn = document.createElement('button');
+        deleteBtn.classList.add('btn', 'btn-danger');
         deleteBtn.innerHTML = 'X';
         deleteBtn.onclick = () => this.removeTodo(todo.id);
 
