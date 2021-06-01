@@ -1,7 +1,7 @@
 export default class Model {
     constructor() {
         this.view = null;
-        this.todos = JSON.parse(localStorage.getItem('todos'));
+        this.todos = JSON.parse(localStorage.getItem('todos2'));
         if (!this.todos || this.todos.length < 1) {
             this.todos = [{
                 id: 0,
@@ -29,7 +29,7 @@ export default class Model {
     }
 
     save() {
-        localStorage.setItem('todos', JSON.stringify(this.todos));
+        localStorage.setItem('todos2', JSON.stringify(this.todos));
         this.view.tasksLeft.innerHTML = this.countTasksLeft();
     }
 
