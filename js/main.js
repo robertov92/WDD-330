@@ -20,6 +20,9 @@ const links = [{
 }, {
     label: "Week 6 - Todo App - Version 2",
     url: "todoV2/"
+}, {
+    label: "Week 7 - Notes and exercises",
+    url: "week7/"
 }];
 
 links.forEach(link => {
