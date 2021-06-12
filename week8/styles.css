@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1,
+h2 {
+    text-align: center;
+}
+
+.p1 {
+    transition: transform 0.2s ease-out 50ms, color 0.1s linear 50ms;
+}
+
+.p1:hover {
+    font-size: 20px;
+    color: brown;
+    transform: translateY(40px);
+}
+
+.p2 {
+    transform: scale(.5);
+    transition: .5s;
+}
+
+.p2:hover {
+    transform: scale(1) translateY(10px);
+    color: blue;
+}
+
+.p3 {
+    transition: .5s;
+}
+
+.p3:hover {
+    transform: scale(1.5) rotate(15deg);
+    color: green;
+    transition: .5s;
+}
+
+.p4:hover {
+    transform: skew(15deg, 4deg);
+    transform-origin: 0 0;
+}
+
+.animation {
+    width: 100%;
+    animation-name: appearDisappear;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+.sky {
+    background-color: rgb(109, 171, 241);
+    height: 250px;
+}
+
+.grass {
+    background-color: rgb(8, 99, 31);
+    height: 100px;
+}
+
+.road {
+    background-color: rgb(124, 124, 124);
+    height: 150px;
+}
+
+.mario {
+    width: 100px;
+    animation-name: drive;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes drive {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(400px);
+    }
+}
+
+@keyframes appearDisappear {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    20%,
+    80% {
+        opacity: 1;
+    }
+}
+
+.myCanvas {
+    border: dotted 2px black;
+}
