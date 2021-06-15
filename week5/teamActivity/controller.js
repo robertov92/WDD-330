@@ -11,17 +11,21 @@ export default class HikesController {
     }
 
     showHikeList() {
-        //  this will get called each time we need to display our full hike list. It should grab the list of hikes from the Model, and then send them to the view.
         this.hikesView.renderHikeList(this.hikeModel.getAllHikes(), this.parentElement);
-        console.log(this.parentElement);
+        this.addHikeListener();
     }
 
     showOneHike(hikeName) {
-        // use this when you need to show just one hike...with full details
+        const hike = this.hikeModel.getHikeByName(hikeName);
+        this.hikesView.renderOneHikeFull(hike, this.parentElement);
 
     }
     addHikeListener() {
-        // for the stretch you will need to attach a listener to each of the listed hikes to watch for a touchend. 
-
+        const childrenArray = Array.from(this.parentElement.children);
+        childrenArray.forEach(element => {
+            element.addEventListener('click', () => {
+                this.showOneHike(element.innerText.split('\n')[0]);
+            });
+        });
     }
 }
