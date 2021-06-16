@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const player1 = '<p class="font-bold text-7xl text-green-500">X</p>';
-    const player2 = '<p class="font-bold text-7xl text-red-500">O</p>';
+    const player1 = '<p class="font-bold text-7xl text-green-700">X</p>';
+    const player2 = '<p class="font-bold text-7xl text-yellow-700">O</p>';
     let player = player1;
 
     const board = document.getElementById('board');
