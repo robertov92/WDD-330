@@ -44,10 +44,10 @@ export default class HikesView {
             </div>
         </div><br>`;
 
-        const returnBtn = document.createElement('a');
+        const returnBtn = document.createElement('button');
         returnBtn.classList.add('m-5', 'bg-blue-500', 'text-white', 'font-bold', 'px-4', 'py-2', 'rounded');
         returnBtn.innerText = 'Go back';
-        returnBtn.setAttribute('href', '/WDD-330/week5/teamActivity/');
         parentElement.appendChild(returnBtn);
+        return returnBtn;
     }
 }

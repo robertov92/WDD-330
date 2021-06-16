@@ -5,19 +5,20 @@ import HikesView from './view.js';
 export default class HikesController {
     constructor(parentId) {
         this.parentElement = document.getElementById(parentId);
-        // this is how our controller will know about the model and view...we add them right into the class as members.
         this.hikeModel = new HikeModel();
         this.hikesView = new HikesView(parentId);
     }
 
     showHikeList() {
+        this.parentElement.innerHTML = '';
         this.hikesView.renderHikeList(this.hikeModel.getAllHikes(), this.parentElement);
         this.addHikeListener();
     }
 
     showOneHike(hikeName) {
         const hike = this.hikeModel.getHikeByName(hikeName);
-        this.hikesView.renderOneHikeFull(hike, this.parentElement);
+        this.hikesView.renderOneHikeFull(hike, this.parentElement)
+            .onclick = () => this.showHikeList();
 
     }
     addHikeListener() {
