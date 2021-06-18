@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(29, 29, 29);
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+}
+
+#square {
+    margin-top: 42vh;
+    width: 100px;
+    height: 100px;
+}
