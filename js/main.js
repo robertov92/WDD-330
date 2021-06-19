@@ -27,8 +27,11 @@ const links = [{
     label: "Week 8 - Notes and exercises",
     url: "week8/"
 }, {
-    label: "Week 9 - Notes and exercises",
+    label: "Week 9 - The Window Object - Animation Example",
     url: "week9/"
+}, {
+    label: "Week 9 - HTML5 APIs - Web Sockets",
+    url: "week9/websocket.html"
 }];
 
 links.forEach(link => {

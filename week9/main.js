@@ -9,7 +9,7 @@ setInterval(() => {
     angle = (angle + 1) % 360;
     colors();
     squareElement.style.transform = `rotate(${angle}deg)`;
-}, 1000 / 60);
+}, 8);
 
 function colors() {
     if (r < 255 && g == 0 && b == 0) {
