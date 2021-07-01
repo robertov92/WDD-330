@@ -33,6 +33,9 @@ const links = [{
     label: "Week 9 - HTML5 APIs - Web Sockets",
     url: "week9/websocket.html"
 }, {
+    label: "Week 9 - Team Activity",
+    url: "week9/teamActivity"
+}, {
     label: "Week 10 - Notes and exercises",
     url: "week10/"
 }];
