@@ -2,9 +2,6 @@ html {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     color: white;
     background-color: rgb(12, 12, 12);
-}
-
-h1 {
     text-align: center;
 }
 
@@ -14,12 +11,14 @@ div {
 }
 
 ul {
+    display: flex;
+    justify-content: space-between;
     list-style-type: none;
     padding-inline-start: 0;
     padding-inline-end: 0;
 }
 
 #red {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: rgb(236, 122, 122);
 }

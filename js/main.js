@@ -34,7 +34,7 @@ const teamActivities = [{
     label: "W2: Calculators ",
     url: "week2/teamActivity"
 }, {
-    label: "W3: ****** Missing",
+    label: "W3: Array Cardio",
     url: "week3/teamActivity"
 }, {
     label: "W4: Tic-Tac-Toe",
