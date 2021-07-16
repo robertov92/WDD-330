@@ -1,8 +1,11 @@
 html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     color: white;
-    text-align: center;
     background-color: rgb(12, 12, 12);
+}
+
+h1 {
+    text-align: center;
 }
 
 div {
@@ -16,10 +19,7 @@ ul {
     padding-inline-end: 0;
 }
 
-li {
-    margin: 0;
-}
-
 #red {
+    font-size: 1.4rem;
     color: rgb(236, 122, 122);
 }

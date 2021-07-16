@@ -469,7 +469,7 @@ function update() {
         ctx.textAlign = "center";
         ctx.textBaseline = "middle";
         ctx.fillStyle = "rgba(255,255,255," + textAlpha + ")";
-        ctx.font = TEXT_SIZE + "px Verdana, Geneva, Tahoma, sans-serif";
+        ctx.font = TEXT_SIZE + "px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
         ctx.fillText(text, canv.width / 2, canv.height * 0.75);
         textAlpha -= (1.0 / TEXT_FADE_TIME / FPS);
     } else if (ship.dead) {
@@ -487,14 +487,14 @@ function update() {
     ctx.textAlign = "left";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "gray";
-    ctx.font = TEXT_SIZE + "px Verdana, Geneva, Tahoma, sans-serif";
+    ctx.font = TEXT_SIZE + "px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
     ctx.fillText("1P " + score, 10, SHIP_SIZE);
 
     // draw the schoreHigh
     ctx.textAlign = "center";
     ctx.textBaseline = "middle";
     ctx.fillStyle = "gray";
-    ctx.font = TEXT_SIZE + "px Verdana, Geneva, Tahoma, sans-serif";
+    ctx.font = TEXT_SIZE + "px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace";
     ctx.fillText("HI " + scoreHigh, canv.width / 2, SHIP_SIZE);
 
     // detect laser hits on asteroids
