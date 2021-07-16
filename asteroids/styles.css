@@ -1,21 +1,25 @@
 html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(212, 212, 212);
-}
-
-body {
-    background-color: rgb(19, 19, 19);
+    color: white;
+    text-align: center;
+    background-color: rgb(12, 12, 12);
 }
 
 div {
-    margin: 100px auto;
+    margin: 0 auto;
     width: 700px;
-}
-
-h1 {
-    text-align: center;
 }
 
 ul {
     list-style-type: none;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+}
+
+li {
+    margin: 0;
+}
+
+#red {
+    color: rgb(236, 122, 122);
 }
