@@ -52,7 +52,7 @@ const teamActivities = [{
     label: "W9: DrumKit",
     url: "week9/teamActivity"
 }, {
-    label: "W10:  Quake List *********In process",
+    label: "W10:  Quake List",
     url: "week10/teamActivity"
 }, {
     label: "W11:  JWT *********In process",

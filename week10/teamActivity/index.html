@@ -5,14 +5,20 @@
     <meta charset="utf-8" />
     <title>Local Quakes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <main>
-        <h1>Quake List</h1>
-        <ul id="quakeList"></ul>
+<body class="container mx-auto bg-gray-900 text-white">
+
+    <main id="content">
+        <h1 class="text-5xl mt-5 mb-3">Quake List from Your Location</h1>
+        <label class="ml-5">Enter a radius: <input class="border text-gray-900" id="radiusInput" type="number"> kms. </label>
+        <button class="px-8 py-1 bg-gray-600 rounded" id="radiusBtn">Get List</button>
+        <p class="ml-5">(Default radius is 500km)</p>
+        <ul id="quakeList" class="ml-5"></ul>
     </main>
+
+    <script src="index.js" type="module"></script>
 </body>
-<script src="index.js" type="module"></script>
 
 </html>
