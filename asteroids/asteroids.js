@@ -48,7 +48,8 @@ var fxHit = new Sound("sounds/hit.m4a", 5, 0.3);
 var fxThrust = new Sound("sounds/thrust.m4a", 1, 0.2);
 
 // set up music
-var music = new Music("sounds/music-low.m4a", "sounds/music-high.m4a");
+var music = new Audio("sounds/music.mp3");
+music.volume = 0.2
 
 // set up the game parameters
 var level, roids, ship, text, textAlpha, lives, score, scoreHigh;
@@ -274,32 +275,6 @@ function shootLaser() {
     ship.canShoot = false;
 }
 
-function Music(srcLow, srcHigh) {
-    this.soundLow = new Audio(srcLow);
-    this.soundHigh = new Audio(srcHigh);
-    this.low = true
-    this.tempo = 1.0
-    this.beatTime = 0
-
-    this.play = function() {
-        if (this.low) {
-            this.soundLow.play()
-        } else {
-            this.soundHigh.play()
-        }
-        this.low = !this.low
-
-    }
-    this.tick = function() {
-        if (this.beatTime == 0) {
-            this.play()
-            this.beatTime = Math.ceil(this.tempo * FPS)
-        } else {
-            this.beatTime--
-        }
-    }
-}
-
 function Sound(src, maxStrams = 1, vol = 1.0) {
     this.streamNum = 0;
     this.streams = [];
@@ -324,7 +299,7 @@ function update() {
     var exploding = ship.explodeTime > 0;
 
     // tick the music
-    music.tick()
+    music.play()
 
     // draw space
     ctx.fillStyle = "rgb(17, 17, 17)";
@@ -457,19 +432,19 @@ function update() {
 
     // show ship's centre dot
     if (SHOW_CENTRE_DOT) {
-        ctx.fillStyle = "rgb(28, 2, 255)";
+        ctx.fillStyle = "#43fcf2";
         ctx.fillRect(ship.x - 1, ship.y - 1, 2, 2);
     }
 
     // draw the lasers
     for (var i = 0; i < ship.lasers.length; i++) {
         if (ship.lasers[i].explodeTime == 0) {
-            ctx.fillStyle = "salmon";
+            ctx.fillStyle = "lime";
             ctx.beginPath();
             ctx.arc(ship.lasers[i].x, ship.lasers[i].y, SHIP_SIZE / 15, 0, Math.PI * 2, false);
             ctx.fill();
         } else {
-            // draw the eplosion
+            // draw the explosion
             ctx.fillStyle = "orangered";
             ctx.beginPath();
             ctx.arc(ship.lasers[i].x, ship.lasers[i].y, ship.r * 0.75, 0, Math.PI * 2, false);
