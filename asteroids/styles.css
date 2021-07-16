@@ -1,0 +1,21 @@
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(212, 212, 212);
+}
+
+body {
+    background-color: rgb(19, 19, 19);
+}
+
+div {
+    margin: 100px auto;
+    width: 700px;
+}
+
+h1 {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
