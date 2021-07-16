@@ -1,51 +1,105 @@
-const mainOrderList = document.getElementById('main-ordered-list');
-const links = [{
-    label: "Week 1 - Notes and exercises",
+const notesAndExercises = [{
+    label: "W1: Doing Stuff with Web Things & Master Mobile UX",
     url: "week1/"
 }, {
-    label: "Week 2 - Notes and exercises",
+    label: "W2: Programming Basics, Arrays, Logic, Loops, and Functions",
     url: "week2/"
 }, {
-    label: "Week 3 - Notes and exercises",
+    label: "W3: Objects, the Document Object Modell, and Events",
     url: "week3/"
 }, {
-    label: "Week 4 - Notes and exercises",
+    label: "W4: Forms, Object Oriented Programming, and Modern JavaScript",
     url: "week4/"
 }, {
-    label: "Week 5 - Notes and exercises",
+    label: "W5: Testing and Debugging",
     url: "week5/"
 }, {
-    label: "Week 6 - Todo App - Version 1",
-    url: "todoV1/"
-}, {
-    label: "Week 6 - Todo App - Version 2",
-    url: "todoV2/"
-}, {
-    label: "Week 7 - Notes and exercises",
+    label: "W7: Further Functions and AJAX",
     url: "week7/"
 }, {
-    label: "Week 8 - Notes and exercises",
+    label: "W8: Animations, Transform, and Transitions",
     url: "week8/"
 }, {
-    label: "Week 9 - The Window Object - Animation Example",
+    label: "W9: The Window Object - Animation Example",
     url: "week9/"
 }, {
-    label: "Week 9 - HTML5 APIs - Web Sockets",
+    label: "W9: Web Sockets",
     url: "week9/websocket.html"
 }, {
-    label: "Week 9 - Team Activity",
+    label: "W10: Validating Forms & Using Fetch",
+    url: "week10/"
+}, ];
+
+const teamActivities = [{
+    label: "W2: Calculators ",
+    url: "week2/teamActivity"
+}, {
+    label: "W3: ****** Missing",
+    url: "week3/teamActivity"
+}, {
+    label: "W4: Tic-Tac-Toe",
+    url: "week4/teamActivity"
+}, {
+    label: "W5: Great Hikes 1",
+    url: "week5/teamActivity"
+}, {
+    label: "W7: Great Hikes 2 ********incomplete",
+    url: "week7/teamActivity"
+}, {
+    label: "W8: PokeAPI",
+    url: "week8/teamActivity.html"
+}, {
+    label: "W9: DrumKit",
     url: "week9/teamActivity"
 }, {
-    label: "Week 10 - Notes and exercises",
-    url: "week10/"
+    label: "W10:  Quake List *********In process",
+    url: "week10/teamActivity"
+}, {
+    label: "W11:  JWT *********In process",
+    url: "week11/client/week11.html"
+}, {
+    label: "W12:  *********Missing",
+    url: "week12/"
 }];
 
-links.forEach(link => {
+const challenges = [{
+    label: "W6: Todo App - Version 1",
+    url: "todoV1/"
+}, {
+    label: "W6: Todo App - Version 2",
+    url: "todoV2/"
+}, {
+    label: "W13: Final Project - Asteroids",
+    url: "asteroids"
+}];
+
+const notesList = document.getElementById('notesAndExercises');
+notesAndExercises.forEach(link => {
     let li = document.createElement('li')
     let a = document.createElement('a');
     let linkLabel = document.createTextNode(link.label);
     a.setAttribute('href', link.url);
     a.appendChild(linkLabel);
     li.appendChild(a);
-    mainOrderList.append(li);
+    notesList.append(li);
+});
+const taList = document.getElementById('teamActivities');
+teamActivities.forEach(link => {
+    let li = document.createElement('li')
+    let a = document.createElement('a');
+    let linkLabel = document.createTextNode(link.label);
+    a.setAttribute('href', link.url);
+    a.appendChild(linkLabel);
+    li.appendChild(a);
+    taList.append(li);
+});
+const challengesList = document.getElementById('challenges');
+challenges.forEach(link => {
+    let li = document.createElement('li')
+    let a = document.createElement('a');
+    let linkLabel = document.createTextNode(link.label);
+    a.setAttribute('href', link.url);
+    a.appendChild(linkLabel);
+    li.appendChild(a);
+    challengesList.append(li);
 });
