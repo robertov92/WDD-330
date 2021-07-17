@@ -40,10 +40,10 @@ const teamActivities = [{
     label: "W4: Tic-Tac-Toe",
     url: "week4/teamActivity"
 }, {
-    label: "W5: Great Hikes 1",
+    label: "W5: Great Hikes 1 - Showing the Hikes",
     url: "week5/teamActivity"
 }, {
-    label: "W7: Great Hikes 2 ********incomplete",
+    label: "W7: Great Hikes 2 - Comments Functionality",
     url: "week7/teamActivity"
 }, {
     label: "W8: PokeAPI",
