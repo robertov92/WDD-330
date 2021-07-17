@@ -7,27 +7,28 @@
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
+        html {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(29, 29, 29);
+            color: white
+        }
+        
+        body {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        input {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        
         .errors {
-            border: 1px solid darkred;
-            background-color: lightcoral;
             padding: 0.5em;
         }
         
-        form input {
-            margin: 0.5em 0;
-            font-size: 1.4em;
-            background-color: antiquewhite;
-            width: 300px;
-        }
-        
-        form button {
-            font-size: 1.2em;
-            padding: 0.4em;
-            background-color: cornflowerblue;
-        }
-        
         input:invalid {
-            box-shadow: 0 0 5px 1px red;
+            border: solid 1px red;
         }
         
         .hidden {
@@ -39,17 +40,17 @@
 <body>
     <header>
         <h1 class="text-center">Authentication Example</h1>
-        <nav></nav>
+        <p>This application works only if the server on the json-server folder is running on port 3000!</p>
     </header>
     <div id="errors" class="errors hidden"></div>
     <div id="login">
         <form>
             <div>
-                <label for="username">Username</label>
+                <label for="username">Username</label><br>
                 <input type="text" class="form-control" id="username" placeholder="Username" value="user1@email.com" />
             </div>
             <div>
-                <label for="password">Password</label>
+                <label for="password">Password</label><br>
                 <input type="password" class="form-control" id="password" placeholder="Password" />
             </div>
             <button type="button" class="btn btn-primary center-block">
@@ -62,11 +63,11 @@
     <div id="content" class="hidden">
         <form name="postForm">
             <div>
-                <label for="title">Title</label>
+                <label for="title">Title</label><br>
                 <input type="text" class="form-control" name="title" placeholder="title" required />
             </div>
             <div>
-                <label for="content">Content</label>
+                <label for="content">Content</label><br>
                 <input type="text" class="form-control" name="content" placeholder="content" required />
             </div>
             <div id="postError"></div>

@@ -52,14 +52,11 @@ const teamActivities = [{
     label: "W9: DrumKit",
     url: "week9/teamActivity"
 }, {
-    label: "W10:  Quake List",
+    label: "W10: Quake List",
     url: "week10/teamActivity"
 }, {
-    label: "W11:  JWT *********In process",
+    label: "W11: JWT",
     url: "week11/client/week11.html"
-}, {
-    label: "W12:  *********Missing",
-    url: "week12/"
 }];
 
 const challenges = [{
